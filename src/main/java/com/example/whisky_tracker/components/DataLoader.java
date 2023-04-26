@@ -34,8 +34,8 @@ public class DataLoader implements ApplicationRunner {
         Distillery distillery4 = new Distillery("Talisker", "Island");
         distilleryRepository.save(distillery4);
 
-        Whisky whisky1 = new Whisky("The Glendronach Revival", 15, 2018, distillery1);
-        whiskyRepository.save(whisky1);
+       Whisky whisky1 = new Whisky("The Glendronach Revival", 15, 2018, distillery1);
+       whiskyRepository.save(whisky1);
 
         Whisky whisky2 = new Whisky("The Glendronach Original", 12, 2018, distillery1);
         whiskyRepository.save(whisky2);

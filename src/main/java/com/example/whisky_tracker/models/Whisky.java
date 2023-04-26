@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "whiskies")
-public class Whisky implements Serializable {
+public class Whisky {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Whisky implements Serializable {
     private String name;
 
     @Column
-    private int year;
+    private int yearCreated;
 
     @Column
     private int age;
@@ -28,9 +28,9 @@ public class Whisky implements Serializable {
     @JsonIgnoreProperties({"whiskies"})
     private Distillery distillery;
 
-    public Whisky(String name, int year, int age, Distillery distillery) {
+    public Whisky(String name, int yearCreated, int age, Distillery distillery) {
         this.name = name;
-        this.year = year;
+        this.yearCreated = yearCreated;
         this.age = age;
         this.distillery = distillery;
     }
@@ -53,12 +53,12 @@ public class Whisky implements Serializable {
         this.name = name;
     }
 
-    public int getYear() {
-        return year;
+    public int getYearCreated() {
+        return yearCreated;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setYearCreated(int year) {
+        this.yearCreated = year;
     }
 
     public int getAge() {

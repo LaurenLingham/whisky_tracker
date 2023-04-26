@@ -25,7 +25,7 @@ public class WhiskyController {
             @RequestParam(name = "distilleryRegion", required = false) String distilleryRegion
     ) {
         if (year != null) {
-            return new ResponseEntity<>(whiskyRepository.findByYear(year), HttpStatus.OK);
+            return new ResponseEntity<>(whiskyRepository.findByYearCreated(year), HttpStatus.OK);
         }
         if (age != null && distilleryName != null) {
             return new ResponseEntity<>(whiskyRepository.findByDistilleryNameAndAge(distilleryName, age), HttpStatus.OK);
